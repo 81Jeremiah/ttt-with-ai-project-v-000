@@ -12,9 +12,9 @@ module Players
         elsif board.turn_count == 1
           move = corner_play.sample
         elsif board.turn_count ==  2
-          move =corner_play.detect{|move| !board.taken?(move)}
+          move = corner_play.detect{|move| !board.taken?(move)}
         elsif board.turn_count == 3 && (board.position(1) == board.position(9) || board.position(3) == board.position(7))
-            move =corner_play.detect{|move| !board.taken?(move)}
+            move = corner_play.detect{|move| !board.taken?(move)}
         else
           Game::WIN_COMBINATIONS.each do |win_combo|
             if  win_combo.select{ |i| board.position(i+1) == token}.size == 2 && win_combo.any?{|i| board.position(i+1) == " "}
