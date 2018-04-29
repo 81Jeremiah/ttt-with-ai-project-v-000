@@ -33,7 +33,7 @@ module Players
              end
           end
           move = all_moves.detect{|i| !board.taken?(i)} #if move == ""
-      end
+    #  end
             move
   #      elsif board.turn_count == 2 && board.valid_move?("7")
   #           "7"
