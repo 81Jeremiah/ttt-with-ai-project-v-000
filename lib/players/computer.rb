@@ -19,10 +19,9 @@ module Players
           move = "5"
         elsif board.turn_count == 1
           move = corner_play.sample
-       elsif board.turn_count ==  2
-            move =corner_play.detect{|move| !board.taken?(move)}
-
-       elsif board.turn_count == 3 && (board.position(1) == board.position(9) || board.position(7) == board.position(7)
+        elsif board.turn_count ==  2
+          move =corner_play.detect{|move| !board.taken?(move)}
+        elsif board.turn_count == 3 && (board.position(1) == board.position(9) || board.position(3) == board.position(7))
             move =corner_play.detect{|move| !board.taken?(move)}
        else
           Game::WIN_COMBINATIONS.each do |win_combo|
@@ -32,8 +31,8 @@ module Players
               move = win_combo.select{|i| !board.taken?(i+1)}.first.to_i.+(1)
              end
           end
-          move = all_moves.detect{|i| !board.taken?(i)} #if move == ""
-    #  end
+          move = all_moves.detect{|i| !board.taken?(i)} if move == ""
+      end
             move
   #      elsif board.turn_count == 2 && board.valid_move?("7")
   #           "7"
@@ -114,6 +113,6 @@ module Players
       #        ["2","4","6","7"].sample
       #        binding.pry
       #    end
-     #end
-   #end
+     end
+   end
 end
