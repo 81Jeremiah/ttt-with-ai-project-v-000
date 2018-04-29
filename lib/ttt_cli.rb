@@ -23,7 +23,7 @@ class TTT_CLI
   def single_player
     puts "Would you like to go first"
     puts "Y/N"
-    
+
     if gets.strip.downcase == "y"
        Game.new(Players::Human.new("X"), Players::Computer.new("O"), Board.new).play
     else
@@ -39,7 +39,7 @@ class TTT_CLI
       if input == 'y'
         start
       else
-        puts "Good game!" 
+        puts "Good game!"
         puts "Enjoy the rest of your day!"
       end
     end
