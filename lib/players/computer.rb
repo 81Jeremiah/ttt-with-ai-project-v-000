@@ -114,6 +114,6 @@ module Players
       #        ["2","4","6","7"].sample
       #        binding.pry
       #    end
-     end
+     #end
    end
 end
