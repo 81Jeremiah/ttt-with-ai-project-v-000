@@ -3,12 +3,12 @@ module Players
   class Computer < Player
 
       def move(board)
-        center = board.cells[4]
-        corners = [board.cells[0],board.cells[2],board.cells[6],board.cells[8]]
-        edges = [board.cells[1],board.cells[3],board.cells[5],board.cells[7]]
-        other_player = @token == "X" ? "O" : "X"
-        corner_play = ["1","3","7","9"]
-        edges_play = ["2","4","6","8"]
+        # center = board.cells[4]
+        # corners = [board.cells[0],board.cells[2],board.cells[6],board.cells[8]]
+        # edges = [board.cells[1],board.cells[3],board.cells[5],board.cells[7]]
+        # other_player = @token == "X" ? "O" : "X"
+        # corner_play = ["1","3","7","9"]
+        # edges_play = ["2","4","6","8"]
         #binding.pry
         # choice unless !!board.valid_move?(choice)
         # while choice !board.valid_move?(choice)
