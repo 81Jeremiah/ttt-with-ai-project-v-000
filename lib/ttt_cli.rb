@@ -4,26 +4,27 @@ class TTT_CLI
 
   def start
     input = ""
-     puts "Welcome to Tic-Tac-Toe!"
-     puts "How many players?(0,1,2)"
-     input = gets.strip
+    puts "Welcome to Tic-Tac-Toe!"
+    puts "How many players?(0,1,2)"
+    input = gets.strip
 
-     case input
-     when "1"
-       single_player
-     when "2"
-       Game.new(Players::Human.new("X"), Players::Human.new("O"), Board.new).play
-       play_again?
-     when "0"
-       Game.new(Players::Computer.new("X"), Players::Computer.new("O"), Board.new).play
-       play_again?
-      end
+    case input
+    when "1"
+      single_player
+    when "2"
+      Game.new(Players::Human.new("X"), Players::Human.new("O"), Board.new).play
+      play_again?
+    when "0"
+      Game.new(Players::Computer.new("X"), Players::Computer.new("O"), Board.new).play
+      play_again?
+    end
    end
 
- def single_player
+  def single_player
     puts "Would you like to go first"
     puts "Y/N"
-     if gets.strip.downcase == "y"
+    
+    if gets.strip.downcase == "y"
        Game.new(Players::Human.new("X"), Players::Computer.new("O"), Board.new).play
     else
       Game.new(Players::Computer.new("X"), Players::Human.new("O"), Board.new).play
@@ -38,8 +39,8 @@ class TTT_CLI
       if input == 'y'
         start
       else
-       puts "Good game!" 
-       puts "Enjoy the rest of your day!"
+        puts "Good game!" 
+        puts "Enjoy the rest of your day!"
       end
     end
   end
