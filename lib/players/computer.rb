@@ -49,7 +49,7 @@ module Players
           end
           move
         end
-        move
+        #move
       end
           #  binding.pry
       #  elsif corners.include?(" ")
