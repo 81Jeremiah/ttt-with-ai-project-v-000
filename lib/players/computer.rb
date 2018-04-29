@@ -18,8 +18,9 @@ module Players
           move = "5"
         elsif board.turn_count == 1
           move = corner_play.sample
-       elsif board.turn_count ==  2 &&  board.valid_move?("5")
-            "5"
+       elsif board.turn_count ==  2
+            move =corner_play.detect{|move| !board.taken?(move)}
+            
        elsif board.turn_count == 2 && board.valid_move?("3")
             "3"
        elsif board.turn_count == 2 && board.valid_move?("7")
