@@ -38,7 +38,8 @@ class TTT_CLI
       if input == 'y'
         start
       else
-       puts "Good game! Goodbye"
+       puts "Good game!" 
+       puts "Enjoy the rest of your day!"
       end
     end
   end
