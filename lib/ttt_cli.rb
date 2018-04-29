@@ -23,10 +23,10 @@ class TTT_CLI
  def single_player
     puts "Would you like to go first"
     puts "Y/N"
-     if gets.strip.downcase == 'y'
-       Game.new(Players::Human.new('X'), Players::Computer.new('O'), Board.new).play
+     if gets.strip.downcase == "y"
+       Game.new(Players::Human.new("X"), Players::Computer.new("O"), Board.new).play
     else
-      Game.new(Players::Computer.new('X'), Players::Human.new('O'), Board.new).play
+      Game.new(Players::Computer.new("X"), Players::Human.new("O"), Board.new).play
     end
     play_again?
   end
