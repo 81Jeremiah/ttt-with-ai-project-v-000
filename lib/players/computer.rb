@@ -32,7 +32,7 @@ module Players
               move = win_combo.select{|i| !board.taken?(i+1)}.first.to_i.+(1)
              end
           end
-              move = all_moves.detect{|i| !board.taken?(i)} if move == ""
+          move = all_moves.detect{|i| !board.taken?(i)} #if move == ""
       end
             move
   #      elsif board.turn_count == 2 && board.valid_move?("7")
