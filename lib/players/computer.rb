@@ -50,9 +50,9 @@ module Players
               move = move_option_1
           end
           #binding.pry
-          move
+          #move
         end
-        #move
+        move
       end
           #  binding.pry
       #  elsif corners.include?(" ")
