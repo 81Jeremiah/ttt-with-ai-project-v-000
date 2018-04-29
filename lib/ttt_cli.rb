@@ -32,7 +32,8 @@ class TTT_CLI
   end
 
   def play_again?
-    puts "Would you like to play again? Y/N"
+    puts "Would you like to play again?"
+    puts "Y/N"
       input = gets.strip.downcase
       if input == 'y'
         start
