@@ -21,7 +21,8 @@ class TTT_CLI
    end
 
  def single_player
-    puts "Would you like to go first\n Y/N"
+    puts "Would you like to go first"
+    puts "Y/N"
      if gets.strip.downcase == 'y'
        Game.new(Players::Human.new('X'), Players::Computer.new('O'), Board.new).play
     else
