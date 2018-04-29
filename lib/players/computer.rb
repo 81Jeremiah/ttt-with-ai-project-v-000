@@ -37,14 +37,14 @@ module Players
          move_option_2 = board.cells[index_2]
          move_option_3 = board.cells[index_3]
 
-         if move_option_1 == move_option_2 && move_option_1 == @token && move_option_3 == " "
+         if move_option_1 == move_option_2 && move_option_1 == @token #&& move_option_3 == " "
            move = move_option_3
 
          elsif
-           move_option_1 == move_option_3 && move_option_1 == @token && move_option_2 == " "
+           move_option_1 == move_option_3 && move_option_1 == @token #&& move_option_2 == " "
              move = move_option_2
           elsif
-            move_option_2 == move_option_3 && move_option_1 == @token && move_option_1 == " "
+            move_option_2 == move_option_3 && move_option_1 == @token #&& move_option_1 == " "
               move = move_option_1
           end
         end
