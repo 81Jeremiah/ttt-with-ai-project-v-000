@@ -13,8 +13,11 @@ module Players
         # choice unless !!board.valid_move?(choice)
         # while choice !board.valid_move?(choice)
         #   choice
-        if board.turn_count == 0 || 1 &&  board.valid_move?("1")
-           "1"
+        move = ""
+        if board.cells[4] == " "
+          move = "5"
+        elsif board.turn_count == 1 
+          move = corner_play.sample
        elsif board.turn_count == 0 || 1 &&  board.valid_move?("5")
             "5"
        elsif board.turn_count == 2 && board.valid_move?("3")
@@ -29,31 +32,32 @@ module Players
    end
        def best_moves(board)
            move = ""
-       Game::WIN_COMBINATIONS.each do |win_combo|
-         index_1 = win_combo[0]
-         index_2 = win_combo[1]
-         index_3 = win_combo[2]
-#binding.pry
-
-         move_option_1 = board.cells[index_1]
-         move_option_2 = board.cells[index_2]
-         move_option_3 = board.cells[index_3]
-
-         if move_option_1 == move_option_2 && move_option_1 #== @token #&& move_option_3 == " "
-           move = move_option_3
-
-         elsif
-           move_option_1 == move_option_3 && move_option_1 #== @token #&& move_option_2 == " "
-             move = move_option_2
-          elsif
-            move_option_2 == move_option_3 && move_option_1 #== @token #&& move_option_1 == " "
-              move = move_option_1
-          end
-          binding.pry
-          #move
-        end
-        move
-      end
+           
+#        Game::WIN_COMBINATIONS.each do |win_combo|
+#          index_1 = win_combo[0]
+#          index_2 = win_combo[1]
+#          index_3 = win_combo[2]
+# #binding.pry
+# 
+#          move_option_1 = board.cells[index_1]
+#          move_option_2 = board.cells[index_2]
+#          move_option_3 = board.cells[index_3]
+# 
+#          if move_option_1 == move_option_2 && move_option_1 #== @token #&& move_option_3 == " "
+#            move = move_option_3
+# 
+#          elsif
+#            move_option_1 == move_option_3 && move_option_1 #== @token #&& move_option_2 == " "
+#              move = move_option_2
+#           elsif
+#             move_option_2 == move_option_3 && move_option_1 #== @token #&& move_option_1 == " "
+#               move = move_option_1
+#           end
+#           binding.pry
+#           #move
+#         end
+#         move
+#       end
           #  binding.pry
       #  elsif corners.include?(" ")
         # elsif corners[0] ==  @token
